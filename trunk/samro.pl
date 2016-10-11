@@ -66,7 +66,7 @@ while(1)
     my $fq2=$fqr2->();
     die "fastq files do not have equal length" if(not $fq1 and $fq2 or not $fq2 and $fq1);
     last unless $fq1;
-    die "fastq files not 'in sync'; $fq1->{readid} != $fq2->{readid} " unless $fq1->{readid} eq $fq2->{readid};
+    #die "fastq files not 'in sync'; $fq1->{readid} != $fq2->{readid} " unless $fq1->{readid} eq $fq2->{readid};
     
     my $readid=$fq1->{readid};
     $s1=$sr1->nextsam() unless $s1;
